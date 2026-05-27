@@ -10,6 +10,16 @@ import {
 export default function TodoScreen({ navigation }) {
   // lista fixa
   const [task, setTask] = useState('');
+
+  const handleAddTask = () => {
+    console.log(task);
+  };
+
+  const TaskList = [
+    { id: "1", text: "Jogar Truco com os amigos", completed: false },
+    { id: "2", text: "Academia às 18h", completed: true },
+    { id: "3", text: "Estudar React Native", completed: true},
+  ];
   
   // função apenas visual para redenrizar cada item
   const renderTodoItem = ({ item }) => (
